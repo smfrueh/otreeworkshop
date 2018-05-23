@@ -24,11 +24,18 @@ SESSION_CONFIGS = [
        'num_demo_participants': 1,
        'app_sequence': ['guessgame'],
     },
-    {  'name': 'dictator_game',
-       'display_name': "dictator_game",
+    {  'name': 'dg_baseline',
+       'display_name': "dictator game - baseline",
        'num_demo_participants': 2,
        'app_sequence': ['dictator_game'],
-    }
+       'treatment_gender': False,
+    },
+    {   'name': 'dg_gender',
+        'display_name': "dictator game - gender info treatment",
+        'num_demo_participants': 2,
+        'app_sequence': ['dictator_game'],
+        'treatment_gender': True,
+     },
 ]
 
 

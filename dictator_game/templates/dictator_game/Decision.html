@@ -3,12 +3,18 @@
 
 {% block title %}
     Decision
-    <div class="alert alert-danger" role="alert">
-  you have been chosen as a {{player.role}}
-</div>
+
 {% endblock %}
 
 {% block content %}
+    <div class="alert alert-danger" role="alert">
+    you have been chosen as a {{player.role}}
+    </div>
+    {% if session.config.treatment_gender == True %}
+    <div class="alert alert-danger" role="alert">
+    Your recipient is: {{gender}}
+    </div>
+    {%endif%}
     Make your decision about sending money:
    {% formfield group.dg_decision %}
     {% next_button %}
