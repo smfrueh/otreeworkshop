@@ -11,8 +11,6 @@ class Intro(Page):
 class Decision (Page):
     form_model = 'player'
     form_fields = ['guess']
-    def before_next_page (self):
-        self.player.payoff = Constants.endowment - abs(self.player.toguess - self.player.guess)
 
 class Results(Page):
     def vars_for_template(self):

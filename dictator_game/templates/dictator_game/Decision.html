@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Decision
+    <div class="alert alert-danger" role="alert">
+  you have been chosen as a {{player.role}}
+</div>
+{% endblock %}
+
+{% block content %}
+    Make your decision about sending money:
+   {% formfield group.dg_decision %}
+    {% next_button %}
+{% endblock %}
+
+

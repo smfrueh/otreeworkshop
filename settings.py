@@ -23,6 +23,11 @@ SESSION_CONFIGS = [
        'display_name': "guessgame",
        'num_demo_participants': 1,
        'app_sequence': ['guessgame'],
+    },
+    {  'name': 'dictator_game',
+       'display_name': "dictator_game",
+       'num_demo_participants': 2,
+       'app_sequence': ['dictator_game'],
     }
 ]
 
@@ -32,9 +37,9 @@ SESSION_CONFIGS = [
 LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'USD'
+REAL_WORLD_CURRENCY_CODE = 'CHF'
 USE_POINTS = True
-
+POINTS_CUSTOM_NAME = 'ECUs'
 ROOMS = []
 
 

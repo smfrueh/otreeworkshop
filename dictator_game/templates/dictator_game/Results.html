@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    Your role was: {{player.role}}
+    {%if player.role == 'dictator'%}
+    Your
+    {% else%}
+    {{Constants.dictator_role_name}}'s
+    {%endif%}
+    initial endowment was: {{Constants.endowment}}
+
+    {%if player.role == 'dictator'%}
+    You decided to send to a {{Constants.sender_role_name}}:
+    {%else%}
+    The {{Constants.dictator_role_name}} decided to send you:
+    {%endif%}
+    {{group.dg_decision}}
+
+    Your payoff is: {{player.payoff}}
+
+
+    {% next_button %}
+{% endblock %}
+
+

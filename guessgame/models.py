@@ -20,6 +20,7 @@ class Constants(BaseConstants):
     maxguess = 100
 
 
+
 class Subsession(BaseSubsession):
     pass
 
@@ -31,3 +32,5 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     guess = models.IntegerField()
     toguess = models.IntegerField()
+    def set_payoff(self):
+        self.payoff = Constants.endowment - abs(self.toguess - self.guess)

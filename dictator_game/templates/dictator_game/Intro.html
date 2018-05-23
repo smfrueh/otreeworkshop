@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+    DICTATOR'S GAME INSTRUCTIONS
+    You and another participant are matched together.
+    One of you takes the role of Dictator and another one is a Receiver.
+    A Dictator receives and endowment of {{Constants.endowment}} points.
+    The Dictator chooses how much of this endowment he or she wants to send to a Receiver.
+    The rest of the endowment is received by a Dictator.
+    {% next_button %}
+{% endblock %}
+
+
