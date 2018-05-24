@@ -36,6 +36,5 @@ class Player(BasePlayer):
     endowment = models.IntegerField()
     charityA = models.BooleanField()
     charityB = models.BooleanField()
-    choice = models.IntegerField(choices=((0, 'Hunger Coalition'),
-                                          (1, 'Organ Donation')), verbose_name='Charities',
-                                 widget=widgets.RadioSelectHorizontal)
+    donationA = models.IntegerField(verbose_name = 'Coalition against Hunger')
+    donationB = models.IntegerField(verbose_name = 'Organ Donation')

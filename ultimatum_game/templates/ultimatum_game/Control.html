@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Control Questions
+{% endblock %}
+
+{% block content %}
+    You are the receiver. The dictator sends you 90.
+    If you accept the offer, how much will you receive?
+    {% formfield player.control1 %}
+    {% next_button %}
+{% endblock %}
+
+
