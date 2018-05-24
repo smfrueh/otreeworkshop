@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Accept or Decline
+{% endblock %}
+
+{% block content %}
+    You have been offered: {{group.ug_decision}}
+    <p><b>Do you wish to accept the offer?</b></p>
+    <div>
+        <button name="ug_accept" value="True" class="btn btn-primary btn-large">Yes</button>
+        <button name="ug_accept" value="False" class="btn btn-primary btn-large">No</button>
+{% endblock %}
+
+

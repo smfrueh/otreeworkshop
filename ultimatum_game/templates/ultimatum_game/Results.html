@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    Your role was: {{player.role}}
+    {%if player.role == 'dictator'%}
+    Your
+    {% else%}
+    Dictator's
+    {%endif%}
+    initial endowment was: {{Constants.endowment}}
+
+    {%if player.role == 'dictator'%}
+    You decided to send to:
+    {%else%}
+    The dictator decided to send you:
+    {%endif%}
+    {{group.ug_decision}}
+
+    {%if player.ug_accept==True %}
+    your payoff is: {{player.payoff}}
+    {% else%}
+    Your payoff is: 0
+    {%endif%}
+    {% next_button %}
+{% endblock %}
+
+

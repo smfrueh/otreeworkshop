@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Decision
+{% endblock %}
+
+{% block content %}
+<h5>Please choose the Charity to which you wish to donate:</h5>
+<img src="{% static image1 %}" width=200 />
+<img src="{% static image2 %}" width=200 />
+
+
+{% formfield player.choice %}
+
+{% next_button %}
+
+{% endblock %}

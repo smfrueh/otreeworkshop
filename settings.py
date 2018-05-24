@@ -13,31 +13,45 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
-       'name': 'my_first_app',
-       'display_name': "my_first_app",
-       'num_demo_participants': 1,
-       'app_sequence': ['my_first_app'],
+        'name': 'my_first_app',
+        'display_name': "my_first_app",
+        'num_demo_participants': 1,
+        'app_sequence': ['my_first_app'],
     },
     {
-       'name': 'guessgame',
-       'display_name': "guessgame",
-       'num_demo_participants': 1,
-       'app_sequence': ['guessgame'],
+        'name': 'guessgame',
+        'display_name': "guessgame",
+        'num_demo_participants': 1,
+        'app_sequence': ['guessgame'],
     },
-    {  'name': 'dg_baseline',
-       'display_name': "dictator game - baseline",
-       'num_demo_participants': 2,
-       'app_sequence': ['dictator_game'],
-       'treatment_gender': False,
-    },
-    {   'name': 'dg_gender',
-        'display_name': "dictator game - gender info treatment",
-        'num_demo_participants': 2,
-        'app_sequence': ['dictator_game'],
-        'treatment_gender': True,
+    {'name': 'dg_baseline',
+     'display_name': "dictator game - baseline",
+     'num_demo_participants': 2,
+     'app_sequence': ['dictator_game'],
+     'treatment_gender': False,
+     },
+    {'name': 'dg_gender',
+     'display_name': "dictator game - gender info treatment",
+     'num_demo_participants': 2,
+     'app_sequence': ['dictator_game'],
+     'treatment_gender': True,
+     },
+    {'name': 'ultimatum_game',
+     'display_name': "ultimatum_game",
+     'num_demo_participants': 2,
+     'app_sequence': ['ultimatum_game'],
+     },
+    {'name': 'political_views',
+     'display_name': "political_views",
+     'num_demo_participants': 1,
+     'app_sequence': ['political_views'],
+     },
+    {'name': 'charities',
+     'display_name': "charities",
+     'num_demo_participants': 1,
+     'app_sequence': ['charities'],
      },
 ]
-
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
@@ -48,7 +62,6 @@ REAL_WORLD_CURRENCY_CODE = 'CHF'
 USE_POINTS = True
 POINTS_CUSTOM_NAME = 'ECUs'
 ROOMS = []
-
 
 # AUTH_LEVEL:
 # this setting controls which parts of your site are freely accessible,
@@ -66,7 +79,6 @@ AUTH_LEVEL = environ.get('OTREE_AUTH_LEVEL')
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
-
 
 # Consider '', None, and '0' to be empty/false
 DEBUG = (environ.get('OTREE_PRODUCTION') in {None, '', '0'})

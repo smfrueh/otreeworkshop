@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Decision
+{% endblock %}
+
+{% block content %}
+    You have been chosen as a: {{player.role}}
+    How much of your {{Constants.endowment}} do you wish to give to the receiver?
+    {% formfield group.ug_decision %}
+
+    {% next_button %}
+{% endblock %}
+
+
