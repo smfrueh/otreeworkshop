@@ -32,12 +32,12 @@ class Group(BaseGroup):
     def set_payoffs(self):
         dictator = self.get_player_by_role('dictator')
         receiver = self.get_player_by_role('receiver')
-        #if ug_accept = True
-         #   dictator.payoff = Constants.endowment - self.ug_decision
-          #  receiver.payoff = self.ug_decision,
-      #  else
-       #     dictator.payoff = 0
-        #    receiver.payoff = 0
+       # if ug_accept == 'True':
+        #    dictator.payoff = Constants.endowment - self.ug_decision
+         #   receiver.payoff = self.ug_decision,
+        #else:
+         #   dictator.payoff = 0
+          #  receiver.payoff = 0
 
 
 

@@ -7,9 +7,9 @@
 
 {% block content %}
     <h5>Please read the Instructions carefully:</h5>
-    <h5>You have an initial endowment of {{Constants.endowment}}.</h5>
+    <h5>You have an endowment of {{player.endowment}}.</h5>
     <h5>You will have the choice between two charities. Please indicate to which charity you would like to donate
-    your entire endowment of {{Constants.endowment}}.</h5>
+    your entire endowment of {{player.endowment}}.</h5>
     {% next_button %}
 
 {% endblock %}

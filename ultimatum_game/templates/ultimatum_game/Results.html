@@ -15,18 +15,15 @@
     initial endowment was: {{Constants.endowment}}
 
     {%if player.role == 'dictator'%}
-    You decided to send to:
+    You decided to send:
     {%else%}
     The dictator decided to send you:
     {%endif%}
     {{group.ug_decision}}
 
-    {%if player.ug_accept==True %}
-    your payoff is: {{player.payoff}}
-    {% else%}
-    Your payoff is: 0
-    {%endif%}
-    {% next_button %}
+
+    your payoff is: {{group.player.payoff}}
+
 {% endblock %}
 
 
