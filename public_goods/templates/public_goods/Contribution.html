@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+    You are in round {{player.round_number}} of {{Constants.num_rounds}}.
     {% formfield player.pg_ind_contr %}
     {% next_button %}
 

@@ -2,11 +2,13 @@
 {% load otree static %}
 
 {% block title %}
-    Instructions
+<font color="fuchsia">Instructions</font>
 {% endblock %}
 
 {% block content %}
+<h5>{%include Constants.path_to_instructions%}</h5>
 
-    {% next_button %}
+{% next_button %}
 
 {% endblock %}
+
