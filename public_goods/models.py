@@ -26,9 +26,10 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pg_group_contr = models.IntegerField()
     average_contrib = models.IntegerField()
+
     def set_payoffs(self):
         self.pg_group_contr = sum([p.pg_ind_contr for p in self.get_players()])
-        self.average_contrib = self.pg_group_contr/Constants.players_per_group
+        self.average_contrib = self.pg_group_contr / Constants.players_per_group
         split_pg_group_contr = (self.pg_group_contr * Constants.coefficient) / Constants.players_per_group
         for p in self.get_players():
             p.payoff = Constants.endowment - p.pg_ind_contr + split_pg_group_contr
