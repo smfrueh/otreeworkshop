@@ -12,8 +12,8 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'public_goods'
-    players_per_group = 3
-    num_rounds = 2
+    players_per_group = 4
+    num_rounds = 10
     endowment = 100
     coefficient = 2
     path_to_instructions = 'public_goods/InstructionsBLOCK.html'
