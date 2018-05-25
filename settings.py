@@ -4,7 +4,7 @@ from os import environ
 # in SESSION_CONFIGS, except those that explicitly override it.
 # the session config can be accessed from methods in your apps as self.session.config,
 # e.g. self.session.config['participation_fee']
-
+SENTRY_DSN = 'http://3e6ecca5bf88469faf23bb3a56f336f1:ef01914c847547ecb6c9fcd176be6128@sentry.otree.org/332'
 SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 1.00,
     'participation_fee': 0.00,
@@ -50,6 +50,11 @@ SESSION_CONFIGS = [
      'display_name': "charities",
      'num_demo_participants': 1,
      'app_sequence': ['charities'],
+     },
+    {'name': 'public_goods',
+     'display_name': "public goods game",
+     'num_demo_participants': 3,
+     'app_sequence': ['public_goods'],
      },
 ]
 

@@ -8,6 +8,7 @@ class Intro(Page):
         animals = ['cat', 'dog', 'mouse', 'rat']
         return {'animals': animals}
 
+
 class Control(Page):
     form_model = 'player'
     form_fields = ['control1']
@@ -15,7 +16,6 @@ class Control(Page):
     def control1_error_message(self, value):
         if value != 90:
             return 'Value incorrect'
-
 
 
 class DecisionSend(Page):
